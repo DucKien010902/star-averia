@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Font Families */
+  --font-crimson: Arial, Helvetica, sans-serif;
+  --font-exo: 'Roboto', sans-serif;
+
+  /* Color Variables */
+  --primary: #00504a;
+  --primary-dark: #003a36;
+  --primary-light: #006b63;
+  --accent-gold: #f0c84f;
+  --accent-gold-light: #D4B87E;
+  --accent-gold-dark: #B8985E;
+  --neutral-white: #FFFFFF;
+  --neutral-gray-50: #F9FAFB;
+  --neutral-gray-100: #F3F4F6;
+  --neutral-gray-200: #E5E7EB;
+  --neutral-gray-300: #D1D5DB;
+  --neutral-gray-800: #1F2937;
+  --neutral-gray-900: #111827;
+
+  /* Spacing */
+  --section-padding-y: 4rem;
+  --container-max-width: 80rem;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-smooth: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--neutral-white);
+  color: var(--neutral-gray-900);
+  font-family: var(--font-exo), Arial, sans-serif !important;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-crimson), Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+textarea {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 1px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 80, 74, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 110, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 169, 110, 0.8);
+}
+
+/* Luxury visual effects */
+.shadow-luxury {
+  box-shadow: 0 30px 60px -15px rgba(0, 58, 54, 0.08);
+}
+
+.shadow-luxury-hover:hover {
+  box-shadow: 0 40px 80px -20px rgba(0, 58, 54, 0.15);
+  transform: translateY(-2px);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--accent-gold-dark) 0%, var(--accent-gold) 50%, var(--accent-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Structural lines and architectural layouts */
+.architect-line {
+  position: relative;
+}
+
+.architect-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(201, 169, 110, 0.15);
+}
+
+.blueprint-grid {
+  border: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.blueprint-grid-item {
+  border-right: 1px solid rgba(201, 169, 110, 0.15);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.blueprint-grid-item:last-child {
+  border-right: none;
+}
+
+/* Fine uppercase labels */
+.label-fine {
+  font-family: var(--font-exo), sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-gold-dark);
+}
+
+/* Skip Intro Loader optimization to prevent layout flicker */
+.skip-intro .intro-loader-overlay {
+  display: none !important;
+}
