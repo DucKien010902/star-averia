@@ -9,16 +9,12 @@ export default function EcosystemSection() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const parkAmenities = [
-    { id: 1, title: "Quảng trường Avenue", image: "/images/hesinhthaicv/quang-truong.jpeg" },
-    { id: 2, title: "Đài phun nước ánh sáng", image: "/images/hesinhthaicv/dai-phun-nuoc.jpeg" },
-    { id: 3, title: "Vườn hoa bốn mùa", image: "/images/hesinhthaicv/vuon-hoa-4-mua.jpeg" },
-    { id: 4, title: "Chòi nghỉ thư giãn công viên", image: "/images/hesinhthaicv/choi-nghi-2.jpeg" },
-    { id: 5, title: "Công viên hoa cẩm tú cầu", image: "/images/hesinhthaicv/vuon-hoa-cam-tu-cau.jpeg" },
-    { id: 6, title: "Không gian thiền, yoga", image: "/images/hesinhthaicv/khu-vuon-hoa-yoga.jpeg" },
-    { id: 7, title: "Khu thể thao ngoài trời", image: "/images/hesinhthaicv/tap-the-duc.jpeg" },
-    { id: 8, title: "Khu vui chơi trẻ em ngoài trời", image: "/images/hesinhthaicv/cong-vien.jpeg" },
-    { id: 9, title: "Sân chơi cầu lông ngoài trời", image: "/images/hesinhthaicv/cau-long.jpeg" },
-    { id: 10, title: "Khu đánh cờ", image: "/images/hesinhthaicv/danh-co.jpeg" },
+    { id: 1, title: "Đài phun nước nghệ thuật", image: "/images/hesinhthaicv/ĐÀI PHUN NƯỚC.jpg" },
+    { id: 2, title: "Quảng trường Tượng Sen", image: "/images/hesinhthaicv/TƯỢNG SEN.jpg" },
+    { id: 3, title: "Vườn hoa cảnh quan", image: "/images/hesinhthaicv/VƯỜN HOA.jpg" },
+    { id: 4, title: "Chòi nghỉ thư giãn", image: "/images/hesinhthaicv/TRÒI.jpg" },
+    { id: 5, title: "Khu vui chơi trẻ em ngoài trời", image: "/images/hesinhthaicv/KHU VUI CHƠI TRẺ EM.jpg" },
+    { id: 6, title: "Tổ hợp Cà phê & Vui chơi", image: "/images/hesinhthaicv/CÀ PHÊ + TRẺ EM.jpg" },
   ];
 
   const handleScroll = (direction: "left" | "right") => {
@@ -84,13 +80,13 @@ export default function EcosystemSection() {
             </div>
             <div className="font-exo text-base text-justify md:text-lg text-neutral-gray-700 leading-relaxed font-medium space-y-4">
               <p>
-                Lấy cảm hứng từ triết lý &ldquo;Nơi khởi nguồn cuộc sống thịnh vượng&rdquo;, <strong className="text-[#894d20]">STAR AVENUE</strong> mang đến một kiệt tác cảnh quan mang đậm dấu ấn cá nhân. Bằng việc hy sinh diện tích thương phẩm để giữ mật độ xây dựng nhà ở vỏn vẹn <strong className="text-[#894d20]">18,83%</strong>, dự án đã nhường chỗ cho một hệ sinh thái công viên khổng lồ cùng hàng loạt tiện ích đặc quyền.
+                Gần 8 ha cây xanh, chiếm gần 28% diện tích dự án, <strong className="text-[#894d20]">STAR AVERIA</strong> hướng tới kiến tạo không gian sống hài hòa giữa thiên nhiên và nhịp sống đô thị hiện đại. Hệ thống công viên, quảng trường, mặt nước và không gian cảnh quan mở ra những điểm hẹn thư giãn, vui chơi và kết nối cộng đồng.
               </p>
               <p>
-                Cư dân và du khách sẽ được đắm chìm trọn vẹn trong cảnh quan mở tinh tế, nơi quy tụ đường dạo bộ rợp bóng râm, trạm dừng chân tĩnh tại, khu thể thao hiện đại và sân chơi trẻ em sáng tạo. Không gian ngập tràn sinh khí này đóng vai trò kép hoàn hảo: vừa thiết lập môi trường tái tạo năng lượng đỉnh cao cho <strong className="text-[#894d20]">giới tinh hoa</strong>, vừa gia tăng sức hấp dẫn mãnh liệt cho khu phố thương mại.
+                Dọc dòng Trà Lý, tuyến phố đi bộ dài khoảng 1 km kết nối với công viên ven sông rộng khoảng 12.000 m², mang đến trải nghiệm dạo bộ giữa không gian thoáng đãng và cảnh quan sông nước. Cùng với các công viên và vườn hoa được bố trí đan xen giữa những dãy phố, mạng lưới không gian xanh tạo điều kiện để cư dân tận hưởng những phút giây thư thái ngay gần nhà.
               </p>
               <p>
-                Sự kết hợp giữa thiên nhiên thuần khiết và tiện ích đa dạng chính là <strong className="text-[#894d20]">chìa khóa vàng</strong> tối ưu hóa trải nghiệm khách hàng và tối đa hóa lợi nhuận đầu tư dài hạn.
+                Tại <strong className="text-[#894d20]">STAR AVERIA</strong>, cây xanh không chỉ góp phần tạo nên diện mạo đô thị giàu sức sống mà còn nâng cao chất lượng môi trường sống, thúc đẩy sự gắn kết cộng đồng và kiến tạo phong cách sống xanh bền vững.
               </p>
             </div>
           </div>
@@ -101,7 +97,7 @@ export default function EcosystemSection() {
           <div className="mb-12">
             <div className="relative w-full aspect-[4/3] md:aspect-[16/9] bg-[#fafbfc] overflow-hidden rounded-2xl border border-neutral-100 shadow-luxury">
               <Image
-                src="/images/hesinhthaicv/goc-ben-1.jpeg"
+                src="/images/hesinhthaicv/tongthe.jpg"
                 alt="Sơ đồ phân khu hệ sinh thái công viên"
                 fill
                 sizes="(max-width: 1200px) 100vw, 1200px"
@@ -159,7 +155,7 @@ export default function EcosystemSection() {
 
                   {/* Footer text: Centered, uppercase green title */}
                   <div className="p-6 md:p-8 flex-grow flex flex-col justify-center items-center text-center bg-white rounded-b-3xl border-t border-neutral-50 min-h-[90px]">
-                    <h3 className="font-exo text-sm md:text-base font-bold text-[#00504a] uppercase tracking-wide leading-snug">
+                    <h3 className="font-exo text-sm md:text-base font-bold text-[#894d20] uppercase tracking-wide leading-snug">
                       {item.title}
                     </h3>
                   </div>

@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 export default function AboutSection() {
   const metrics = [
     { title: "Vận hành", value: "24/7", desc: "Linh hoạt tối ưu công năng" },
-    { title: "Quy hoạch", value: "8.73 ha", desc: "Đồng bộ thương mại & cảnh quan" },
+    { title: "Quy hoạch", value: "28,54 ha", desc: "Đồng bộ thương mại & cảnh quan" },
     { title: "Pháp lý", value: "Lâu dài", desc: "Sở hữu bền vững truyền đời" }
   ];
 
@@ -30,7 +30,7 @@ export default function AboutSection() {
           {/* NARRATIVE TEXT (Centered/Justified) */}
           <AnimatedSection animation="fadeUp" delay={0.15}>
             <p className="font-exo text-[16px] md:text-lg leading-relaxed text-gray-700 text-justify md:text-center font-medium max-w-7xl mx-auto">
-              <strong className="text-[#894d20]">STAR AVENUE</strong> được kiến tạo như một biểu tượng thương mại – dịch vụ hiện đại tại khu vực phát triển năng động của phường Trần Lãm. Dự án hướng tới không gian nơi mua sắm, giải trí, dịch vụ, kinh doanh và đầu tư được kết nối trong cùng một điểm đến có bản sắc. Với ngôn ngữ kiến trúc nổi bật, hệ tiện ích thương mại đồng bộ và định hướng vận hành linh hoạt, <strong className="text-[#894d20]">STAR AVENUE</strong> không chỉ góp phần làm mới diện mạo giao thương đô thị, mà còn tạo nền tảng cho những giá trị khai thác lâu dài của nhà đầu tư, chủ kinh doanh và cộng đồng cư dân khu vực.
+              <strong className="text-[#894d20]">STAR AVERIA</strong> được kiến tạo tại vị trí trung tâm đô thị, nơi nhịp sống hiện đại giao hòa cùng dòng chảy sông Trà Lý. Mang trong mình lợi thế kết nối thuận tiện, không gian sống giàu giá trị cảnh quan và định hướng phát triển đồng bộ, dự án mở ra một điểm đến mới cho cộng đồng cư dân đang tìm kiếm một chuẩn sống tiện nghi, văn minh và bền vững.
             </p>
           </AnimatedSection>
 

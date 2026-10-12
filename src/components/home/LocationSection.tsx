@@ -1,14 +1,10 @@
 "use client";
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import Image from "next/image";
 import { MapPin, Navigation, Users, TrendingUp } from "lucide-react";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 
 export default function LocationSection() {
-  const mapRef = useRef(null);
-  const isMapInView = useInView(mapRef, { once: true, margin: "-100px" });
-
   const advantages = [
     {
       icon: Navigation,
@@ -69,13 +65,12 @@ export default function LocationSection() {
               <div className="h-[2px] w-12 bg-gradient-to-l from-transparent to-[#a56428]" />
             </div>
             <p className="font-crimson text-lg md:text-xl italic text-[#894d20]/80 font-medium">
-              Tâm điểm kết nối trên trục giao thương Lý Bôn
+              Tọa lạc tại khu vực trung tâm Thái Bình.
             </p>
             <p className="font-exo text-[16px] md:text-lg text-gray-700 leading-relaxed font-medium text-left pt-2">
-              Sở hữu mặt tiền trên trục Lý Bôn, <strong className="text-[#894d20]">STAR AVENUE</strong> hưởng
-              lợi trực tiếp từ một tuyến lưu thông và giao thương sôi động của khu vực trung tâm
-              phường Trần Lãm. Vị trí chiến lược tạo nền tảng thuận lợi cho các mô hình kinh doanh
-              cần mặt bằng có nhận diện, lưu lượng tiếp cận và tính kết nối cao.
+              <strong className="text-[#894d20]">STAR AVERIA</strong>sở hữu vị trí ven sông Trà Lý, kết nối thuận tiện với các tuyến giao thông và khu vực trọng điểm của đô thị. Lợi thế vị trí tạo nên nền tảng cho một không gian sống hiện đại, giàu giá trị và tiềm năng phát triển dài hạn.
+              <strong className="text-[#894d20]">STAR AVERIA</strong> – khu đô thị ven sông Trà Lý tại trung tâm Thái Bình, kiến tạo không gian sống hiện đại, kết nối thuận tiện và giá trị bền vững, nơi nhịp sống đô thị hòa cùng dòng chảy kiến tạo tương lai.
+
             </p>
           </div>
         </AnimatedSection>
@@ -84,7 +79,7 @@ export default function LocationSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
           {/* LEFT: Advantage Cards (3 cols - 25% width) */}
-          <div className="lg:col-span-3 order-2 lg:order-1">
+          {/* <div className="lg:col-span-3 order-2 lg:order-1">
             <AnimatedSection animation="fadeUp" delay={0.1}>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {advantages.map((item, i) => {
@@ -94,7 +89,6 @@ export default function LocationSection() {
                       key={i}
                       className="group relative p-4 rounded-2xl border border-[#a56428]/15 bg-gradient-to-br from-[#ffeabf]/15 to-white hover:border-[#a56428]/40 hover:shadow-md transition-all duration-300 overflow-hidden"
                     >
-                      {/* Corner accent */}
                       <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#a56428]/30 rounded-tl-2xl pointer-events-none" />
 
                       <div className="flex items-start gap-3">
@@ -115,34 +109,28 @@ export default function LocationSection() {
                 })}
               </div>
             </AnimatedSection>
-          </div>
+          </div> */}
 
           {/* RIGHT: Map/Video (9 cols - 75% width) */}
-          <div className="lg:col-span-9 order-1 lg:order-2">
+          <div className="lg:col-span-12 order-1 lg:order-2">
             <AnimatedSection animation="fadeUp" delay={0.15}>
               <div className="relative">
-                <div className="relative rounded-2xl overflow-hidden border border-[#a56428]/10 shadow-sm">
+                <div className="relative rounded-2xl overflow-hidden border border-[#a56428]/10 shadow-sm bg-[#fafbfc]">
                   <div className="relative w-full aspect-[16/9]">
-                    <div
-                      ref={mapRef}
-                      className={`absolute inset-0 ${isMapInView ? "map-zoom-animate is-visible" : ""}`}
-                      style={{ transform: isMapInView ? undefined : "scale(1.8)", transformOrigin: "center center" }}
-                    >
-                      <video
-                        src="/images/Map.webm"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="w-full h-full object-cover"
-                        style={{ transform: "scale(1.01)", transformOrigin: "center center" }}
-                      />
-                    </div>
+                    <Image
+                      src="/images/ban-do-star-averia.png"
+                      alt="Sơ đồ vị trí kết nối giao thông và liên kết vùng của dự án STAR AVERIA"
+                      fill
+                      priority
+                      quality={95}
+                      className="object-cover"
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                    />
                   </div>
                 </div>
 
                 <p className="mt-3 text-center font-exo text-xs md:text-sm text-gray-400 italic">
-                  Sơ đồ vị trí kết nối giao thông và liên kết vùng của dự án <strong className="text-[#894d20]">STAR AVENUE</strong>
+                  Sơ đồ vị trí kết nối giao thông và liên kết vùng của dự án <strong className="text-[#894d20]">STAR AVERIA</strong>
                 </p>
               </div>
             </AnimatedSection>

@@ -69,9 +69,6 @@ export default function Home() {
       {/* Sản phẩm */}
       <ModernPotentialSection />
 
-      {/* News Section - TIN TỨC DỰ ÁN */}
-      <NewsSection />
-
       <Footer />
     </div>
   );

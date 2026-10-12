@@ -5,7 +5,7 @@ import { Phone, Mail, ChevronUp } from "lucide-react";
 
 const PHONE = "0938619339";
 const ZALO = "0938619339";
-const EMAIL = "info@staravenue.vn";
+const EMAIL = "info@staraveria.vn";
 
 export default function FloatingContacts() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

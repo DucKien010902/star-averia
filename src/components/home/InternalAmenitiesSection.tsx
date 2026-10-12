@@ -62,9 +62,13 @@ export default function InternalAmenitiesSection() {
               <div className="w-2 h-2 rounded-full bg-[#a56428]" />
               <div className="h-[1px] w-12 bg-gradient-to-l from-transparent to-[#a56428]" />
             </div>
+            <strong className="text-[#894d20]">STAR AVERIA</strong>
             <div className="font-exo text-base text-justify md:text-lg text-neutral-gray-700 leading-relaxed font-medium space-y-4">
               <p>
-                Hệ tiện ích <strong className="text-[#894d20]">STAR AVENUE</strong> được phát triển theo mô hình <strong className="text-[#894d20]">All-in-One</strong>, nơi mọi nhu cầu mua sắm, dịch vụ, giải trí, thư giãn và kết nối cộng đồng cùng hội tụ trong một tổ hợp thương mại – dịch vụ hiện đại. Tâm điểm là trung tâm thương mại 5 tầng, kết hợp hệ sinh thái công viên, quảng trường, không gian xanh, khu vui chơi, thể thao ngoài trời, café, lounge và các điểm trải nghiệm đa thế hệ.
+                <strong className="text-[#894d20]">STAR AVERIA</strong> hướng tới kiến tạo hệ tiện ích đồng bộ, nơi mọi nhu cầu sống, nghỉ ngơi, vui chơi và kết nối cộng đồng được đáp ứng trong một không gian đô thị hiện đại. Lợi thế cảnh quan ven sông Trà Lý kết hợp cùng hệ thống công viên, không gian cây xanh, mặt nước và tuyến phố đi bộ mở ra những trải nghiệm thư thái giữa nhịp sống năng động. Không gian công cộng được định hướng trở thành điểm hẹn giao lưu, vui chơi và tổ chức các hoạt động cộng đồng, góp phần hình thành môi trường sống văn minh, giàu sức sống.
+              </p>
+              <p>
+                Cùng với lợi thế kết nối khu vực trung tâm, <strong className="text-[#894d20]">STAR AVERIA</strong> hướng đến sự thuận tiện trong sinh hoạt hằng ngày, đồng thời tạo điều kiện phát triển các hoạt động thương mại, dịch vụ phục vụ cư dân. Không chỉ dừng lại ở tiện nghi, hệ sinh thái tiện ích còn góp phần nâng tầm chất lượng sống, kiến tạo cộng đồng gắn kết và bồi đắp những giá trị bền vững theo thời gian.
               </p>
             </div>
           </div>

@@ -142,7 +142,7 @@ export default function ContactForm() {
 
                 {/* Email Card */}
                 <a
-                  href="mailto:info@staravenue.vn"
+                  href="mailto:info@staraveria.vn"
                   className="group flex flex-col items-center text-center gap-3 bg-white text-black border border-[#a56428]/15 rounded-2xl p-5 hover:border-[#a56428]/40 hover:shadow-md transition-all duration-300"
                 >
                   <div className="w-12 h-12 rounded-full bg-[#a56428]/10 flex items-center justify-center shrink-0 text-[#894d20] group-hover:bg-gradient-to-br group-hover:from-[#a56428] group-hover:to-[#894d20] group-hover:text-white transition-all duration-300 shadow-sm">
@@ -150,8 +150,8 @@ export default function ContactForm() {
                   </div>
                   <div className="w-full overflow-hidden">
                     <span className="block font-exo text-[10px] text-gray-500 uppercase tracking-wider font-semibold mb-1">Email liên hệ</span>
-                    <span className="block font-exo text-xs sm:text-sm font-bold text-[#703a17] transition-colors truncate px-1" title="info@staravenue.vn">
-                      info@staravenue.vn
+                    <span className="block font-exo text-xs sm:text-sm font-bold text-[#703a17] transition-colors truncate px-1" title="info@staraveria.vn">
+                      info@staraveria.vn
                     </span>
                   </div>
                 </a>

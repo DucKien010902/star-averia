@@ -38,7 +38,7 @@ export default function Footer() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          project: "Star Avenue",
+          project: "Star eria",
           name: formData.name,
           phone: `'${formData.phone}`,
           email: '',
@@ -64,7 +64,7 @@ export default function Footer() {
 
   const contactInfo = {
     phone: '0386 828 888',
-    email: 'info@staravenue.vn',
+    email: 'info@staraveria.vn',
     address: 'Tầng 2, Tòa nhà CT3, Khu ĐTM Nghĩa Đô, Phường Nghĩa Đô, Thành phố Hà Nội, Việt Nam'
   };
 
@@ -94,7 +94,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4">
               <div className="select-none">
                 <span className="block text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#703a17] via-[#b97330] to-[#703a17] bg-clip-text text-transparent">
-                  STAR AVENUE
+                  STAR AVERIA
                 </span>
               </div>
             </Link>
@@ -106,10 +106,7 @@ export default function Footer() {
                 <p className="text-gray-600 mt-1">Tầng 2, Tòa nhà CT3, Khu ĐTM Nghĩa Đô, Phường Nghĩa Đô, Thành phố Hà Nội, Việt Nam.</p>
               </div>
 
-              <div className="pt-3 border-t border-[#a56428]/25">
-                <h4 className="font-bold text-[#703a17] uppercase tracking-wider mb-2 text-sm">Đơn vị phát triển dự án</h4>
-                <p className="text-[#894d20]">CÔNG TY CỔ PHẦN HẠ TẦNG ĐÔNG HẢI SỐ 1 </p>
-              </div>
+
             </div>
           </div>
 
@@ -130,22 +127,7 @@ export default function Footer() {
                     {contactInfo.address}
                   </span>
                 </li>
-                <li className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-full bg-[#a56428]/10 flex items-center justify-center shrink-0 group-hover:bg-[#a56428]/20 transition-colors">
-                    <Mail className="w-4 h-4 text-[#894d20]" />
-                  </div>
-                  <a href={`mailto:${contactInfo.email}`} className="text-gray-700 hover:text-[#894d20] transition-all pt-1">
-                    {contactInfo.email}
-                  </a>
-                </li>
-                <li className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-full bg-[#a56428]/10 flex items-center justify-center shrink-0 group-hover:bg-[#a56428]/20 transition-colors">
-                    <Phone className="w-4 h-4 text-[#894d20]" />
-                  </div>
-                  <a href={`tel:${contactInfo.phone}`} className="text-gray-700 hover:text-[#894d20] transition-all font-bold pt-1">
-                    {contactInfo.phone}
-                  </a>
-                </li>
+
               </ul>
             </div>
 
@@ -232,7 +214,7 @@ export default function Footer() {
               </form>
 
               <div className="mt-8 pt-8 border-t border-[#a56428]/25">
-                <p className="font-exo text-sm uppercase tracking-wider text-[#894d20] mb-4">Kết nối với chúng tôi</p>
+
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => {
                     return (
@@ -260,7 +242,7 @@ export default function Footer() {
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 font-exo text-sm text-gray-500">
             <p>
-              &copy; {new Date().getFullYear()} Star Avenue. Tất cả các quyền được bảo lưu.
+              &copy; {new Date().getFullYear()} Star Averia. Tất cả các quyền được bảo lưu.
             </p>
             <div className="flex gap-6">
               <Link href="#" className="hover:text-[#894d20] transition-colors">

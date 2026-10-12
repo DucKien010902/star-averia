@@ -36,7 +36,7 @@ export default function MasterPlanSection() {
     lens.style.top = `${y - lensHeight / 2}px`;
 
     // Scale level
-    const zoomScale = 5;
+    const zoomScale = 10;
 
     // Dynamically size the zoomed container container to be zoomScale times the size of the container,
     // so the zoomed image renders at the correct magnification
@@ -83,14 +83,10 @@ export default function MasterPlanSection() {
             </div>
             <div className="font-exo text-[16px] md:text-lg text-gray-700 leading-relaxed font-medium text-justify md:text-left max-w-7xl mx-auto space-y-4">
               <p>
-                Tổng mặt bằng <strong className="text-[#894d20]">STAR AVENUE</strong> được phát triển với tư duy quy hoạch lấy thương mại làm trung tâm, đồng thời chú trọng trải nghiệm cảnh quan và sự kết nối trong toàn khu.
+                Mặt bằng <strong className="text-[#894d20]">STAR AVERIA</strong> được quy hoạch đồng bộ, chú trọng sự hài hòa giữa không gian sống, cảnh quan và hệ thống tiện ích. Từng phân khu được tổ chức khoa học, tối ưu khả năng kết nối và khai thác, tạo nên một tổng thể đô thị hiện đại, thuận tiện và giàu giá trị cho cư dân cũng như nhà đầu tư.
+
               </p>
-              <p>
-                Các phân khu chức năng như trung tâm thương mại, nhà phố thương mại, quảng trường, đài phun nước, đường dạo bộ, mảng xanh và tiện ích ngoài trời được bố trí nhằm tạo nên một không gian vận hành liền mạch, thuận tiện cho khách tham quan, cư dân, nhà đầu tư và chủ kinh doanh.
-              </p>
-              <p>
-                Không chỉ dừng ở vai trò một công trình thương mại, <strong className="text-[#894d20]">STAR AVENUE</strong> hướng đến mô hình không gian có khả năng thu hút dòng khách, gia tăng thời gian lưu trú và hỗ trợ hiệu quả cho các hoạt động mua sắm, dịch vụ, giải trí và kinh doanh hiện đại.
-              </p>
+
             </div>
           </div>
         </AnimatedSection>
@@ -108,7 +104,7 @@ export default function MasterPlanSection() {
             >
               {/* Main map image */}
               <Image
-                src="/images/MBLYBON.png"
+                src="/images/MẶT BẰNG UPSCALE.png"
                 alt="Tổng mặt bằng dự án Star Avenue"
                 fill
                 priority
@@ -120,13 +116,13 @@ export default function MasterPlanSection() {
               {/* Floating magnifier lens (Square Shape) */}
               <div
                 ref={lensRef}
-                className="absolute w-60 h-60 border-2 border-accent-gold shadow-2xl bg-[#fafbfc] pointer-events-none overflow-hidden hidden z-30 rounded-lg"
+                className="absolute w-[360px] h-[360px] border-2 border-accent-gold shadow-2xl bg-[#fafbfc] pointer-events-none overflow-hidden hidden z-30 rounded-lg"
                 style={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.4)" }}
               >
                 {/* Zoomed inner container */}
                 <div className="absolute pointer-events-none origin-top-left">
                   <Image
-                    src="/images/MBLYBON.png"
+                    src="/images/MẶT BẰNG UPSCALE.png"
                     alt="Zoomed Map"
                     fill
                     unoptimized
