@@ -15,7 +15,7 @@ export default function ValuesSection() {
         <AnimatedSection animation="fadeUp">
           <div className="relative w-full aspect-[28/18] max-w-7xl mx-auto">
             <Image
-              src="/images/6-gia-tri-cot-loi.png"
+              src="/images/web 6 giá trị.png"
               alt="6 giá trị cốt lõi STAR AVENUE"
               fill
               priority
