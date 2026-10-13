@@ -62,9 +62,9 @@ function ProductCoverflowSlider({ group }: { group: ProductGroup }) {
   };
 
   return (
-    <div className="mb-8 md:mb-12 last:mb-0">
+    <div className="last:mb-0">
       {/* ── Product Header Block ────────────────── */}
-      <div className="mb-2 border-b border-[#a56428]/20 pb-2">
+      <div className="mb-1.5 sm:mb-2 border-b border-[#a56428]/20 pb-1.5 sm:pb-2">
         <h3 className="font-crimson text-lg md:text-xl font-bold uppercase tracking-wide text-[#703a17]">
           {group.title}
         </h3>
@@ -72,7 +72,7 @@ function ProductCoverflowSlider({ group }: { group: ProductGroup }) {
 
       {/* ── 3D Overlapping Coverflow Area ──────── */}
       <div
-        className="relative w-full h-[420px] sm:h-[520px] md:h-[600px] lg:h-[660px] flex items-center justify-center overflow-hidden py-1 select-none"
+        className="relative w-full h-[210px] min-[400px]:h-[240px] min-[500px]:h-[280px] sm:h-[350px] md:h-[450px] lg:h-[540px] flex items-center justify-center overflow-hidden py-1 select-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
@@ -81,19 +81,19 @@ function ProductCoverflowSlider({ group }: { group: ProductGroup }) {
         {/* Left Arrow Button (Floating overlay) */}
         <button
           onClick={prev}
-          className="absolute left-2 sm:left-4 md:left-6 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/95 backdrop-blur-md border border-[#a56428]/30 text-[#894d20] flex items-center justify-center shadow-xl hover:bg-[#894d20] hover:text-white transition-all duration-300 cursor-pointer active:scale-90"
+          className="absolute left-1 sm:left-4 md:left-6 z-40 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white/95 backdrop-blur-md border border-[#a56428]/30 text-[#894d20] flex items-center justify-center shadow-md hover:bg-[#894d20] hover:text-white transition-all duration-300 cursor-pointer active:scale-90"
           aria-label="Ảnh trước"
         >
-          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
         {/* Right Arrow Button (Floating overlay) */}
         <button
           onClick={next}
-          className="absolute right-2 sm:right-4 md:right-6 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/95 backdrop-blur-md border border-[#a56428]/30 text-[#894d20] flex items-center justify-center shadow-xl hover:bg-[#894d20] hover:text-white transition-all duration-300 cursor-pointer active:scale-90"
+          className="absolute right-1 sm:right-4 md:right-6 z-40 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-white/95 backdrop-blur-md border border-[#a56428]/30 text-[#894d20] flex items-center justify-center shadow-md hover:bg-[#894d20] hover:text-white transition-all duration-300 cursor-pointer active:scale-90"
           aria-label="Ảnh sau"
         >
-          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
         {/* Images Layer */}
@@ -172,15 +172,15 @@ function ProductCoverflowSlider({ group }: { group: ProductGroup }) {
       </div>
 
       {/* ── Dots Navigation ────────────────────── */}
-      <div className="flex items-center justify-center gap-2 mt-2.5">
+      <div className="flex items-center justify-center gap-1.5 md:gap-2 mt-2 md:mt-3">
         {group.images.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+            className={`h-1.5 md:h-2 rounded-full transition-all duration-300 cursor-pointer ${
               i === currentIndex
-                ? "w-8 bg-[#894d20]"
-                : "w-2 bg-[#a56428]/25 hover:bg-[#a56428]/50"
+                ? "w-6 md:w-8 bg-[#894d20]"
+                : "w-1.5 md:w-2 bg-[#a56428]/25 hover:bg-[#a56428]/50"
             }`}
             aria-label={`Chuyển đến ảnh ${i + 1}`}
           />
@@ -305,7 +305,7 @@ export default function ModernPotentialSection() {
       <div className="w-[90%] max-w-7xl mx-auto relative z-10">
         {/* Header Block */}
         <AnimatedSection animation="fadeUp">
-          <div className="text-center mb-6 md:mb-8 max-w-7xl mx-auto">
+          <div className="text-center mb-4 md:mb-8 max-w-7xl mx-auto">
             <h2 className="font-crimson text-3xl md:text-4xl font-bold uppercase tracking-wide mb-3 bg-gradient-to-r from-[#703a17] via-[#b97330] to-[#703a17] bg-clip-text text-transparent">
               SẢN PHẨM
             </h2>
@@ -329,7 +329,7 @@ export default function ModernPotentialSection() {
 
         {/* ── 3 Product Groups with Overlapping Coverflow Slider ── */}
         <AnimatedSection animation="fadeUp" delay={0.15}>
-          <div className="space-y-8 md:space-y-12 mt-4">
+          <div className="space-y-6 md:space-y-12 mt-2 md:mt-4">
             {productGroups.map((group) => (
               <ProductCoverflowSlider key={group.id} group={group} />
             ))}

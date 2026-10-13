@@ -19,23 +19,51 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { label: "TRANG CHỦ", href: "/" },
-    { label: "VỊ TRÍ", href: "/vi-tri" },
+    { label: "TRANG CHỦ", targetId: "top", href: "#" },
+    { label: "VỊ TRÍ", targetId: "vitri", href: "#vitri" },
     {
       label: "MẶT BẰNG",
-      href: "/mat-bang",
+      targetId: "masterplan",
+      href: "#masterplan",
     },
     {
       label: "TIỆN ÍCH",
-      href: "/tien-ich",
+      targetId: "ecosystem",
+      href: "#ecosystem",
       dropdown: [
-        { label: "Hệ sinh thái công viên", href: "/tien-ich/he-sinh-thai-cong-vien" },
-        { label: "Tiện ích nội khu", href: "/tien-ich" },
+        { label: "Hệ sinh thái công viên", targetId: "ecosystem", href: "#ecosystem" },
+        { label: "Tiện ích nội khu", targetId: "amenities", href: "#amenities" },
       ],
     },
-    { label: "SẢN PHẨM", href: "/bang-gia" },
-    { label: "TIN TỨC", href: "/tin-tuc" },
+    { label: "SẢN PHẨM", targetId: "potential", href: "#potential" },
   ];
+
+  const scrollToSection = (e: React.MouseEvent, targetId?: string) => {
+    e.preventDefault();
+    if (!targetId) {
+      setIsOpen(false);
+      return;
+    }
+
+    if (targetId === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsOpen(false);
+      return;
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      const navOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav
@@ -57,9 +85,9 @@ export default function Navigation() {
             className="flex items-center group transition-transform duration-300 hover:scale-102"
           >
             <img
-              src="/images/logo/Logo Star Avnenue-03.png"
-              alt="The Star City Logo"
-              className="h-24 lg:h-28 w-auto transition-all"
+              src="/images/logo/Star Averia.png"
+              alt="STAR AVERIA Logo"
+              className="h-20 lg:h-22 w-auto transition-all"
             />
           </Link>
 
@@ -70,8 +98,8 @@ export default function Navigation() {
                 <div key={item.label} className="relative group">
                   <button
                     type="button"
-                    className={`flex items-center gap-1.5 px-3 xl:px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal transition-all duration-300 uppercase ${pathname.startsWith(item.href) ? "text-[#a56428]" : "text-[#894d20]/80 hover:text-[#a56428]"
-                      }`}
+                    onClick={(e) => scrollToSection(e, item.targetId)}
+                    className="flex items-center gap-1.5 px-3 xl:px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal transition-all duration-300 uppercase cursor-pointer text-[#894d20]/80 hover:text-[#a56428]"
                   >
                     {item.label}
                     <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
@@ -80,44 +108,42 @@ export default function Navigation() {
                   {/* Dropdown Menu */}
                   <div className="absolute top-full left-0 mt-2 w-60 bg-white border border-[#a56428]/20 shadow-[0_10px_30px_rgba(137,77,32,0.15)] py-2 transition-all duration-300 rounded-none opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                     {item.dropdown.map((subItem) => (
-                      <Link
-                        key={subItem.href}
+                      <a
+                        key={subItem.label}
                         href={subItem.href}
-                        className={`block px-6 py-3 text-[16px] font-exo font-bold tracking-normal uppercase transition-all duration-300 ${pathname === subItem.href
-                          ? "text-white bg-gradient-to-r from-[#a56428] to-[#894d20] font-bold"
-                          : "text-[#894d20]/80 hover:bg-[#ffeabf]/30 hover:text-[#a56428] hover:translate-x-1"
-                          }`}
+                        onClick={(e) => scrollToSection(e, subItem.targetId)}
+                        className="block px-6 py-3 text-[16px] font-exo font-bold tracking-normal uppercase transition-all duration-300 cursor-pointer text-[#894d20]/80 hover:bg-[#ffeabf]/30 hover:text-[#a56428] hover:translate-x-1"
                       >
                         {subItem.label}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </div>
               ) : (
-                <Link
+                <a
                   key={item.label}
                   href={item.href}
-                  className={`group relative px-3 xl:px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal transition-all duration-300 uppercase ${pathname === item.href ? "text-[#a56428]" : "text-[#894d20]/80 hover:text-[#a56428]"
-                    }`}
+                  onClick={(e) => scrollToSection(e, item.targetId)}
+                  className="group relative px-3 xl:px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal transition-all duration-300 uppercase cursor-pointer text-[#894d20]/80 hover:text-[#a56428]"
                 >
                   {item.label}
                   <span
-                    className={`absolute bottom-0 left-3 right-3 xl:left-4 xl:right-4 h-[1.5px] bg-[#a56428] transition-transform duration-300 origin-center ${pathname === item.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                      }`}
+                    className="absolute bottom-0 left-3 right-3 xl:left-4 xl:right-4 h-[1.5px] bg-[#a56428] transition-transform duration-300 origin-center scale-x-0 group-hover:scale-x-100"
                   />
-                </Link>
+                </a>
               ),
             )}
 
             {/* Premium Rectangular slide-fill CTA Button */}
-            <Link
-              href="/lien-he"
-              className="ml-4 group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-transparent border border-[#a56428]/50 text-[#894d20] font-exo text-[16px] font-bold uppercase tracking-normal hover:text-white transition-colors duration-300 overflow-hidden shadow-sm rounded-xl"
+            <a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, "contact")}
+              className="ml-4 group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-transparent border border-[#a56428]/50 text-[#894d20] font-exo text-[16px] font-bold uppercase tracking-normal hover:text-white transition-colors duration-300 overflow-hidden shadow-sm rounded-xl cursor-pointer"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-[#a56428] to-[#894d20] -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0" />
               <Phone className="w-3.5 h-3.5 relative z-10" />
               <span className="relative z-10">Liên hệ</span>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -140,52 +166,47 @@ export default function Navigation() {
               <div key={item.label} className="py-1">
                 {item.dropdown ? (
                   <>
-                    <div
-                      className={`flex items-center justify-between px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal uppercase ${pathname === item.href ? "text-[#a56428]" : "text-[#894d20]"
-                        }`}
+                    <button
+                      type="button"
+                      onClick={(e) => scrollToSection(e, item.targetId)}
+                      className="w-full text-left flex items-center justify-between px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal uppercase text-[#894d20]"
                     >
                       <span>{item.label}</span>
-                    </div>
+                    </button>
                     <div className="pl-4 space-y-1.5 my-2 border-l border-[#a56428]/25 ml-4">
                       {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.href}
+                        <a
+                          key={subItem.label}
                           href={subItem.href}
-                          className={`block px-4 py-[10px] text-[16px] font-exo font-bold tracking-normal uppercase rounded-none transition-all ${pathname === subItem.href
-                            ? "text-[#a56428] bg-[#ffeabf]/30"
-                            : "text-[#894d20]/80 hover:text-[#a56428] hover:bg-[#ffeabf]/30"
-                            }`}
-                          onClick={() => setIsOpen(false)}
+                          onClick={(e) => scrollToSection(e, subItem.targetId)}
+                          className="block px-4 py-[10px] text-[16px] font-exo font-bold tracking-normal uppercase rounded-none transition-all cursor-pointer text-[#894d20]/80 hover:text-[#a56428] hover:bg-[#ffeabf]/30"
                         >
                           {subItem.label}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </>
                 ) : (
-                  <Link
+                  <a
                     href={item.href}
-                    className={`block px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal uppercase rounded-none transition-all ${pathname === item.href
-                      ? "text-[#a56428] bg-[#ffeabf]/30"
-                      : "text-[#894d20]/80 hover:text-[#a56428] hover:bg-[#ffeabf]/30"
-                      }`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => scrollToSection(e, item.targetId)}
+                    className="block px-4 py-[10px] font-exo text-[16px] font-bold tracking-normal uppercase rounded-none transition-all cursor-pointer text-[#894d20]/80 hover:text-[#a56428] hover:bg-[#ffeabf]/30"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 )}
               </div>
             ))}
 
             {/* Mobile CTA */}
-            <Link
-              href="/lien-he"
-              className="mx-4 mt-6 flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#a56428]/50 text-[#894d20] text-center font-exo text-[16px] font-bold uppercase tracking-normal rounded-xl hover:bg-gradient-to-r hover:from-[#a56428] hover:to-[#894d20] hover:text-white hover:border-transparent transition-all duration-300"
-              onClick={() => setIsOpen(false)}
+            <a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, "contact")}
+              className="mx-4 mt-6 flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#a56428]/50 text-[#894d20] text-center font-exo text-[16px] font-bold uppercase tracking-normal rounded-xl hover:bg-gradient-to-r hover:from-[#a56428] hover:to-[#894d20] hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer"
             >
               <Phone className="w-5 h-5" />
               <span>Liên hệ</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

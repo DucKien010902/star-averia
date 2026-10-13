@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -11,16 +11,14 @@ import ValuesSection from "@/components/home/ValuesSection";
 import EcosystemSection from "@/components/home/EcosystemSection";
 import InternalAmenitiesSection from "@/components/home/InternalAmenitiesSection";
 import ModernPotentialSection from "@/components/home/ModernPotentialSection";
-import RegistrationSection from "@/components/home/RegistrationSection";
-import NewsSection from "@/components/home/NewsSection";
 import CTASection from "@/components/home/CTASection";
 import { HeroProps } from "@/types";
 
 export default function Home() {
   const heroProps: HeroProps = {
-    title: "The Star City",
-    subtitle: "Không gian sống đẳng cấp - Phong cách sống hiện đại",
-    backgroundImage: "/images/backgroundImage.jpg",
+    title: "STAR AVERIA",
+    subtitle: "Khu Đô Thị Ven Sông Trà Lý - Đại Lộ Giao Thương, Tâm Điểm Đầu Tư",
+    backgroundImage: "/images/banner-star-averia.png",
     ctaButtons: [
       {
         label: "Đăng ký ngay",

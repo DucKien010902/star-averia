@@ -68,7 +68,7 @@ export default function LocationSection() {
               Tọa lạc tại khu vực trung tâm Thái Bình.
             </p>
             <p className="font-exo text-[16px] md:text-lg text-gray-700 leading-relaxed font-medium text-left pt-2">
-              <strong className="text-[#894d20]">STAR AVERIA</strong>sở hữu vị trí ven sông Trà Lý, kết nối thuận tiện với các tuyến giao thông và khu vực trọng điểm của đô thị. Lợi thế vị trí tạo nên nền tảng cho một không gian sống hiện đại, giàu giá trị và tiềm năng phát triển dài hạn.
+              <strong className="text-[#894d20]">STAR AVERIA</strong> sở hữu vị trí ven sông Trà Lý, kết nối thuận tiện với các tuyến giao thông và khu vực trọng điểm của đô thị. Lợi thế vị trí tạo nên nền tảng cho một không gian sống hiện đại, giàu giá trị và tiềm năng phát triển dài hạn.
               <strong className="text-[#894d20]">STAR AVERIA</strong> – khu đô thị ven sông Trà Lý tại trung tâm Thái Bình, kiến tạo không gian sống hiện đại, kết nối thuận tiện và giá trị bền vững, nơi nhịp sống đô thị hòa cùng dòng chảy kiến tạo tương lai.
 
             </p>

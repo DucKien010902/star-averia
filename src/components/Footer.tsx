@@ -38,7 +38,7 @@ export default function Footer() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          project: "Star eria",
+          project: "STAR AVERIA",
           name: formData.name,
           phone: `'${formData.phone}`,
           email: '',
@@ -82,7 +82,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#FFF4DB] text-gray-800 border-t border-[#a56428]/20 relative">
+    <footer id="contact" className="bg-[#FFF4DB] text-gray-800 border-t border-[#a56428]/20 relative">
       {/* Decorative Top Accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-[2px] bg-gradient-to-r from-transparent via-[#a56428] to-transparent opacity-80"></div>
 
@@ -90,49 +90,32 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6">
 
           {/* Logo & Office Info (Spans 4 columns) */}
-          <div className="lg:col-span-4 flex flex-col">
-            <Link href="/" className="inline-block mb-4">
+          <div className="lg:col-span-4 flex flex-col items-center justify-start text-center">
+            <Link href="/" className="inline-block mb-3 group">
               <div className="select-none">
-                <span className="block text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#703a17] via-[#b97330] to-[#703a17] bg-clip-text text-transparent">
+                <span className="block text-4xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-[#703a17] via-[#b97330] to-[#703a17] bg-clip-text text-transparent group-hover:opacity-90 transition-opacity">
                   STAR AVERIA
                 </span>
               </div>
             </Link>
 
-            <div className="space-y-4 font-exo text-base font-medium leading-relaxed">
-              <div>
-                <h4 className="font-bold text-[#703a17] uppercase tracking-wider mb-2 text-sm">Trụ sở công ty</h4>
-                <p>CÔNG TY CỔ PHẦN HẠ TẦNG ĐÔNG HẢI SỐ 1 </p>
-                <p className="text-gray-600 mt-1">Tầng 2, Tòa nhà CT3, Khu ĐTM Nghĩa Đô, Phường Nghĩa Đô, Thành phố Hà Nội, Việt Nam.</p>
-              </div>
-
-
-            </div>
+            <Link href="/" className="inline-block mt-2 group">
+              <img
+                src="/images/logo/Star Averia.png"
+                alt="STAR AVERIA Logo"
+                className="h-32 sm:h-40 md:h-44 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
+              />
+            </Link>
           </div>
 
           {/* Contact & Links (Spans 8 columns) */}
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 lg:pl-12">
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-8 lg:pl-12">
 
             {/* Contact Info */}
-            <div className="md:col-span-2 lg:col-span-1">
-              <h3 className="font-crimson text-2xl font-bold mb-4 text-[#703a17] tracking-wide">
-                Thông tin liên hệ
-              </h3>
-              <ul className="space-y-3 font-exo text-base font-medium">
-                <li className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-full bg-[#a56428]/10 flex items-center justify-center shrink-0 group-hover:bg-[#a56428]/20 transition-colors">
-                    <MapPin className="w-4 h-4 text-[#894d20]" />
-                  </div>
-                  <span className="leading-relaxed pt-2 text-gray-700">
-                    {contactInfo.address}
-                  </span>
-                </li>
 
-              </ul>
-            </div>
 
             {/* Quick Links */}
-            <div>
+            {/* <div>
               <h3 className="font-crimson text-2xl font-bold mb-4 text-[#703a17] tracking-wide">
                 Liên kết nhanh
               </h3>
@@ -149,10 +132,10 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Newsletter */}
-            <div>
+            <div className="md:col-span-3 lg:col-span-2">
               <h3 className="font-crimson text-2xl font-bold mb-4 text-[#703a17] tracking-wide">
                 Đăng ký nhận tin
               </h3>
@@ -213,7 +196,7 @@ export default function Footer() {
                 )}
               </form>
 
-              <div className="mt-8 pt-8 border-t border-[#a56428]/25">
+              {/* <div className="mt-8 pt-8 border-t border-[#a56428]/25">
 
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => {
@@ -230,11 +213,28 @@ export default function Footer() {
                     );
                   })}
                 </div>
-              </div>
+              </div> */}
+            </div>
+            <div className="md:col-span-3 lg:col-span-2">
+              <h3 className="font-crimson text-2xl font-bold mb-4 text-[#703a17] tracking-wide">
+                Thông tin liên hệ
+              </h3>
+              <ul className="space-y-3 font-exo text-base font-medium">
+                <li className="flex items-start gap-4 group">
+                  <div className="w-10 h-10 rounded-full bg-[#a56428]/10 flex items-center justify-center shrink-0 group-hover:bg-[#a56428]/20 transition-colors">
+                    <MapPin className="w-4 h-4 text-[#894d20]" />
+                  </div>
+                  <span className="leading-relaxed pt-2 text-gray-700">
+                    {contactInfo.address}
+                  </span>
+                </li>
+
+              </ul>
             </div>
 
           </div>
         </div>
+
       </div>
 
       {/* Bottom Bar */}

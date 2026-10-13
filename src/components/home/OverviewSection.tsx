@@ -9,12 +9,7 @@ export default function OverviewSection() {
   const specs = [
     { icon: Building2, label: "Tên thương mại", value: "STAR AVERIA" },
     { icon: MapPin, label: "Vị trí", value: "Khu vực trung tâm phường Thái Bình, tỉnh Hưng Yên" },
-    {
-      icon: Award,
-      label: "Chủ đầu tư",
-      value: "CÔNG TY CỔ PHẦN ĐẦU TƯ HƯNG THÁI PROPERTY"
-    },
-    { icon: Landmark, label: "Đơn vị đồng hành", value: "BIDV" },
+
     { icon: Ruler, label: "Quy mô", value: "28,54 ha" },
     { icon: Home, label: "Sản phẩm", value: "Liền kề - Biệt thự - Chung cư" },
     { icon: TreePine, label: "Loại hình phát triển", value: "Khu đô thị, trung tâm thương mại 9 tầng, công viên cảnh quan." },

@@ -96,8 +96,8 @@ export default function IntroLoader() {
                   className="relative w-32 h-32 md:w-40 md:h-40 mb-6 drop-shadow-[0_10px_30px_rgba(137,77,32,0.06)]"
                 >
                   <Image
-                    src="/images/logo/Logo Star Avnenue-03.png"
-                    alt="STAR AVENUE Logo"
+                    src="/images/logo/Star Averia.png"
+                    alt="STAR AVERIA Logo"
                     fill
                     priority
                     className="object-contain"
@@ -116,7 +116,7 @@ export default function IntroLoader() {
                     }}
                     className="font-crimson text-3xl md:text-5xl font-bold tracking-[0.2em] bg-gradient-to-r from-[#703a17] via-[#b97330] to-[#703a17] bg-clip-text text-transparent text-center"
                   >
-                    STAR AVENUE
+                    STAR AVERIA
                   </motion.h1>
                 </div>
 
